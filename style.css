@@ -1,0 +1,15 @@
+body{
+	background: rgb(255,201,243);
+	background: linear-gradient(90deg, rgba(255,201,243,1) 0%, rgba(225,148,255,1) 35%, rgba(130,234,255,1) 100%);
+	font-size: 20px;
+	font-family: verdana;
+	color: white;
+}
+
+a{
+	color: cyan;
+}
+
+h1,a {
+	font-size: 2em;
+}
