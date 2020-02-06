@@ -104,21 +104,22 @@ function mousePressed() {
 		currentSetting = "ocean";
 
 		// update story
-		story = "Jerry and Jenny decided to swim across the ocean.";
+		story = "First, Alexis and Jade went to Zara.";
 
 		// update characters position
 		jerryX = 400;
-		jennyX = 500;
+		jennyX = 700;
 
 	} else if (currentSetting == "ocean") {
 		currentSetting = "island";
-		story = "Jerry and Jenny arrived at an island in the middle of the ocean.";
+		story = "Then they went to Glossier, to buy some make-up.";
 
-		jennyX = 600;
+		jerryX =
+		jennyX = 700;
 
 	} else if (currentSetting == "island") {
 		currentSetting = "beach";
-		story = "Once upon a time, there were two characters named Jenny and Jerry.";
+		story = "On a Saturday Afernoon, Alexis and Jade decided to go to the mall";
 
 		jerryX = 100;
 		jennyX = 300;
