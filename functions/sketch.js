@@ -3,26 +3,26 @@ var jerry;
 var jenny;
 var jenny0;
 var jerry0;
-var zara;
-var mall;
-var glossier;
+var zaraimg;
+var mallimg;
+var glossierimg;
 
 function preload() {
-	jerry = loadImage('jerry.png');
+    jerry = loadImage('jerry.png');
 	jenny = loadImage('jenny.png');
 	jenny0 = loadImage('jenny0.png');
 	jerry0 = loadImage('jerry0.png');
-    zara = loadImage('zara.png');
-    mall = loadImage('mall.png');
-    glossier = loadImage('glossier.png');
+    zaraimg = loadImage('zara.png');
+    mallimg = loadImage('mall.png');
+    glossierimg = loadImage('glossier.png');
 }
 
 // location variables
-var jerryX = 850;
-var jerryY = 150;
+    var jerryX = 850;
+    var jerryY = 150;
 
-var jennyX = 1090;
-var jennyY = 150;
+    var jennyX = 1090;
+    var jennyY = 150;
 
 var story = "On a Saturday Afternoon, Alexis and Jade decided they were going to go to the mall.";
 
@@ -37,50 +37,17 @@ function setup() {
 
 function draw() {
 
-	// conditional statement
 	if (currentSetting == "mall") {
-		background('lightblue');
-
-		fill('darkgray');
-		noStroke()
-		rect(0, height * 2/3, width, height * 1/3);
-        
-        loadImage('mall.png');
-		imageMode(CENTER);
-		image(mall, width/4, height * 1/2);
-	} 
-
-	
-	else if (currentSetting == "zara") {
-		background('blue');
-
-		fill('blue');
-		noStroke();
-		rect(0, height * 2/3, width, height * 1/4);
-        
-        loadImage('zara.png');
-		imageMode(CENTER);
-		image(zara, width/4, height * 1/2);
-		
-	}
-
-	
-	else if (currentSetting == "glossier") {
-		background('purple');
-
-		fill('purple');
-		noStroke();
-		rect(0, height * 2/3, width, height * 1/3);
-
-        loadImage('glossier.png');
-		imageMode(CENTER);
-		image(glossier, width/4, height * 1/2);
-		
-	}
+		mall();
+	} else if (currentSetting == "zara") {
+		zara();
+	} else if (currentSetting == "glossier") {
+		glossier();
+	} else if (currentSetting == "mall") { 
+		mall();
+    }
     
-   
-
-	// draw characters
+      // draw characters
 	imageMode(CENTER);
 	image(jerry0, jerryX, jerryY);
 	image(jenny0, jennyX, jennyY);
@@ -102,41 +69,48 @@ function draw() {
         fill('darkgray');
 		noStroke()
 		rect(0, height * 2/3, width, height * 1/3);
+     
+     
+        //mall
+        loadImage('mall.png');
+		imageMode(CENTER);
+		image(mallimg, width/4, height * 1/2);
         
     
     }
     
     
-    function zara() {
+function zara() {
         background('blue');
         fill('blue');
 		noStroke();
 		rect(0, height * 2/3, width, height * 1/4);
         
-    
+        
+        //zara
+        loadImage('zara.png');
+		imageMode(CENTER);
+		image(zaraimg, width/4, height * 1/2);
+		
     }
     
     
-    function glossier()  {
+function glossier()  {
         
         background('purple');
         fill('purple');
 		noStroke();
 		rect(0, height * 2/3, width, height * 1/3);
-
-    
-    
-    
+        
+        
+        //glossier
+        loadImage('glossier.png');
+		imageMode(CENTER);
+		image(glossierimg, width/4, height * 1/2);
+		
     }
     
-    function mousedPressed () {
     
-    
-    }
-
-	
-
-
 function mousePressed() {
 	
 	if (currentSetting == "mall") {
