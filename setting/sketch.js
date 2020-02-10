@@ -7,20 +7,26 @@ var jerry;
 var jenny;
 var jenny0;
 var jerry0;
+var zara;
+var mall;
+var glossier;
 
 function preload() {
 	jerry = loadImage('jerry.png');
 	jenny = loadImage('jenny.png');
 	jenny0 = loadImage('jenny0.png');
 	jerry0 = loadImage('jerry0.png');
+    zara = loadImage('zara.png');
+    mall = loadImage('mall.png');
+    glossier = loadImage('glossier.png');
 }
 
 // location variables
-var jerryX = 200;
-var jerryY = 200;
+var jerryX = 700;
+var jerryY = 150;
 
-var jennyX = 600;
-var jennyY = 300;
+var jennyX = 900;
+var jennyY = 150;
 
 var story = "On a Saturday Afternoon, Alexis and Jade decided they were going to go to the mall.";
 
@@ -40,32 +46,40 @@ function draw() {
 		background('lightblue');
 
 		fill('darkgray');
-		noStroke();
+		noStroke()
 		rect(0, height * 2/3, width, height * 1/3);
+        
+        loadImage('mall.png');
+		imageMode(CENTER);
+		image(mall, width/4, height * 1/2);
 	} 
 
 	// ocean setting
 	else if (currentSetting == "ocean") {
-		background('lightblue');
+		background('blue');
 
-		fill('darkblue');
+		fill('blue');
 		noStroke();
-		rect(0, height * 2/3, width, height * 1/3);
-
+		rect(0, height * 2/3, width, height * 1/4);
+        
+        loadImage('zara.png');
+		imageMode(CENTER);
+		image(zara, width/4, height * 1/2);
 		
 	}
 
 	// island setting 
 	else if (currentSetting == "island") {
-		background('lightblue');
+		background('purple');
 
-		fill('darkblue');
+		fill('purple');
 		noStroke();
 		rect(0, height * 2/3, width, height * 1/3);
 
-		// island
-		//imageMode(CENTER);
-		//image(island, width/2, height * 2/3);
+        loadImage('glossier.png');
+		imageMode(CENTER);
+		image(glossier, width/4, height * 1/2);
+		
 	}
 
 	
@@ -83,9 +97,9 @@ function draw() {
 
 	// instructions
 	textSize(18);
-	fill('white');
+	fill('black');
 	// text("Click to go to the next scene", width - 100, height - 70, 100);
-	text("Right arrow to advance story", width - 100, height - 70, 100);
+	text("click to advance story", width - 100, height - 70, 100);
 }
 
 /*
@@ -107,55 +121,22 @@ function mousePressed() {
 		story = "First, Alexis and Jade went to Zara.";
 
 		// update characters position
-		jerryX = 400;
-		jennyX = 700;
+		jerryX = 700;
+		jennyX = 850;
 
 	} else if (currentSetting == "ocean") {
 		currentSetting = "island";
 		story = "Then they went to Glossier, to buy some make-up.";
 
-		jerryX =
-		jennyX = 700;
+		jerryX = 650;
+		jennyX = 850;
 
 	} else if (currentSetting == "island") {
 		currentSetting = "beach";
 		story = "On a Saturday Afernoon, Alexis and Jade decided to go to the mall";
 
-		jerryX = 100;
-		jennyX = 300;
+		jerryX = 700;
+		jennyX = 900;
 	}
 }
 
-function keyPressed() {
-	
-	// test the keycode 
-	if (keyCode == 39) {
-		// change scene 
-		// scene order: beach, ocean, island
-		if (currentSetting == "beach") {
-
-			// change setting
-			currentSetting = "ocean";
-
-			// update story
-			story = "Jerry and Jenny decided to swim across the ocean.";
-
-			// update characters position
-			jerryX = 400;
-			jennyX = 500;
-
-		} else if (currentSetting == "ocean") {
-			currentSetting = "island";
-			story = "Jerry and Jenny arrived at an island in the middle of the ocean.";
-
-			jennyX = 600;
-
-		} else if (currentSetting == "island") {
-			currentSetting = "beach";
-			story = "Once upon a time, there were two characters named Jenny and Jerry.";
-
-			jerryX = 100;
-			jennyX = 300;
-		}
-	}
-}
