@@ -1,8 +1,3 @@
-/*
-	setting sketch
-	2.3.2020
-*/
-
 var jerry;
 var jenny;
 var jenny0;
@@ -22,16 +17,16 @@ function preload() {
 }
 
 // location variables
-var jerryX = 700;
+var jerryX = 850;
 var jerryY = 150;
 
-var jennyX = 900;
+var jennyX = 1090;
 var jennyY = 150;
 
 var story = "On a Saturday Afternoon, Alexis and Jade decided they were going to go to the mall.";
 
-// beach, ocean, island
-var currentSetting = "beach";
+// mall, zara, glossier
+var currentSetting = "mall";
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
@@ -42,7 +37,7 @@ function setup() {
 function draw() {
 
 	// conditional statement
-	if (currentSetting == "beach") {
+	if (currentSetting == "mall") {
 		background('lightblue');
 
 		fill('darkgray');
@@ -55,7 +50,7 @@ function draw() {
 	} 
 
 	// ocean setting
-	else if (currentSetting == "ocean") {
+	else if (currentSetting == "zara") {
 		background('blue');
 
 		fill('blue');
@@ -69,7 +64,7 @@ function draw() {
 	}
 
 	// island setting 
-	else if (currentSetting == "island") {
+	else if (currentSetting == "glossier") {
 		background('purple');
 
 		fill('purple');
@@ -91,7 +86,7 @@ function draw() {
 
 	// narration
 	fill('black');
-	textSize(30);
+	textSize(27);
 	textAlign(CENTER, CENTER);
 	text(story, width/4, 20, width/2);
 
@@ -112,31 +107,31 @@ function draw() {
 function mousePressed() {
 	// change scene 
 	// scene order: beach, ocean, island
-	if (currentSetting == "beach") {
+	if (currentSetting == "mall") {
 
 		// change setting
-		currentSetting = "ocean";
+		currentSetting = "zara";
 
 		// update story
 		story = "First, Alexis and Jade went to Zara.";
 
 		// update characters position
-		jerryX = 700;
-		jennyX = 850;
+		jerryX = 800;
+		jennyX = 1000;
 
-	} else if (currentSetting == "ocean") {
-		currentSetting = "island";
+	} else if (currentSetting == "zara") {
+		currentSetting = "glossier";
 		story = "Then they went to Glossier, to buy some make-up.";
 
-		jerryX = 650;
-		jennyX = 850;
+		jerryX = 800;
+		jennyX = 1050;
 
-	} else if (currentSetting == "island") {
-		currentSetting = "beach";
+	} else if (currentSetting == "glossier") {
+		currentSetting = "mall";
 		story = "On a Saturday Afernoon, Alexis and Jade decided to go to the mall";
 
-		jerryX = 700;
-		jennyX = 900;
+		jerryX = 850;
+		jennyX = 1090;
 	}
 }
 
