@@ -8,6 +8,7 @@ var zaraimg;
 var mallimg;
 var glossierimg;
 
+
 function preload() {
     jerryImage = loadImage('jerry.png');
 	jennyImage = loadImage('jenny.png');
@@ -16,6 +17,7 @@ function preload() {
     zaraimg = loadImage('zara.png');
     mallimg = loadImage('mall.png');
     glossierimg = loadImage('glossier.png');
+    
 }
 
 // location variables
@@ -35,7 +37,7 @@ function setup() {
 	imageMode(CENTER);
 }
 
-function draw() {
+//function draw() {
 
 	if (currentSetting == "mall") {
 		
