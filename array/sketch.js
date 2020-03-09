@@ -49,12 +49,8 @@ function mousePressed() {
   mySound.play();
 }
 
-
 function draw() {
-
-	
-	
-	// background colors
+// background colors
 	background (225, 75, random(225));
     
 	// zara
