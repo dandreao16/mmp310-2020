@@ -52,10 +52,8 @@ function mousePressed() {
 
 function draw() {
 
-	textSize(18);
-	fill('black');
-	// text("Click to go to the next scene", width - 100, height - 70, 100);
-	text("click for sound", width - 100, height - 70, 100);
+	
+	
 	// background colors
 	background (225, 75, random(225));
     
