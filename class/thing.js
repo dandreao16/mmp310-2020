@@ -8,4 +8,4 @@ class Thing {
 	draw() {
 		image(this.img, this.x, this.y);
 	}
-}
+} 
